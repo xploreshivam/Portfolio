@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%" style="background:#0b0f19; font-family: system-ui, sans-serif;">
+  <defs>
+    <linearGradient id="glassBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ec4899" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="#0b0f19" />
+  <!-- Colorful background circles for glassmorphism effect -->
+  <circle cx="280" cy="180" r="120" fill="#ec4899" opacity="0.8" />
+  <circle cx="520" cy="280" r="140" fill="#3b82f6" opacity="0.8" />
+  <circle cx="400" cy="200" r="90" fill="#8b5cf6" opacity="0.7" />
+
+  <!-- Glass Card Preview Center -->
+  <rect x="220" y="100" width="360" height="230" rx="20" fill="rgba(255, 255, 255, 0.15)" stroke="rgba(255, 255, 255, 0.3)" stroke-width="1.5" />
+  <text x="400" y="180" fill="#ffffff" font-size="22" font-weight="800" text-anchor="middle">Glassmorphism Card</text>
+  <text x="400" y="210" fill="#e2e8f0" font-size="14" text-anchor="middle">Backdrop Blur: 16px | Opacity: 25%</text>
+
+  <rect x="330" y="240" width="140" height="40" rx="20" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.5)" />
+  <text x="400" y="265" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">Copy CSS Code</text>
+
+  <!-- Controls Panel at Bottom -->
+  <rect x="100" y="360" width="600" height="60" rx="12" fill="#1e293b" stroke="#334155" />
+  <text x="140" y="395" fill="#94a3b8" font-size="13">Blur</text>
+  <rect x="180" y="388" width="100" height="6" rx="3" fill="#3b82f6" />
+  <text x="320" y="395" fill="#94a3b8" font-size="13">Opacity</text>
+  <rect x="380" y="388" width="100" height="6" rx="3" fill="#ec4899" />
+  <text x="520" y="395" fill="#94a3b8" font-size="13">Radius</text>
+  <rect x="580" y="388" width="80" height="6" rx="3" fill="#8b5cf6" />
+</svg>

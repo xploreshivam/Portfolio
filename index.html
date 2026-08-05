@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SHIVAM CHAUHAN — Portfolio</title>
+  <meta name="description" content="Portfolio of Shivam Chauhan — Full-Stack Developer, Projects, Skills, and Experience." />
+  
+  <!-- Preconnect & DNS Prefetch -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="https://unpkg.com">
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+  <!-- Preload Critical LCP Hero Image -->
+  <link rel="preload" as="image" type="image/webp" href="portrait.webp">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;700;800&family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;700;800&family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"></noscript>
+
+  <!-- AOS CSS Asynchronous -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></noscript>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+      fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+      fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+  <canvas id="hero-canvas"></canvas>
+
+  <main id="main">
+    <section id="hero-style-simple" class="hero-section">
+      <div class="hero-marquee">
+        <!-- Row 1: Solid, Moves Left -->
+        <div class="marquee-track scroll-left">
+          <h1 class="hero-text-big">SHIVAM</h1>
+          <span class="hero-text-big" aria-hidden="true">SHIVAM</span>
+          <span class="hero-text-big" aria-hidden="true">SHIVAM</span>
+          <span class="hero-text-big" aria-hidden="true">SHIVAM</span>
+        </div>
+        <!-- Row 2: Hollow, Moves Right -->
+        <div class="marquee-track scroll-right">
+          <span class="hero-text-big stroke" aria-hidden="true">SHIVAM</span>
+          <span class="hero-text-big stroke" aria-hidden="true">SHIVAM</span>
+          <span class="hero-text-big stroke" aria-hidden="true">SHIVAM</span>
+          <span class="hero-text-big stroke" aria-hidden="true">SHIVAM</span>
+        </div>
+      </div>
+      <div class="container hero-content">
+        <div class="hero-image-container">
+          <img src="portrait.webp" alt="SHIVAM CHAUHAN" class="hero-pfp" width="235" height="235"
+            fetchpriority="high" decoding="async" />
+        </div>
+        <h1 class="hero-main-name">
+          <span class="name-gradient-animated">SHIVAM CHAUHAN</span>
+        </h1>
+        <p class="hero-subtitle">Software Development Engineer</p>
+        <div class="hero-grid">
+          <span>Code</span>
+          <span class="separator">•</span>
+          <span>Design</span>
+          <span class="separator">•</span>
+          <span>Systems</span>
+        </div>
+
+        <div class="hero-actions">
+          <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <svg class="hamburger-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line class="line-top" x1="3" y1="6" x2="21" y2="6"></line>
+              <line class="line-mid" x1="3" y1="12" x2="21" y2="12"></line>
+              <line class="line-bot" x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <span class="mobile-menu-label">Menu</span>
+          </button>
+          <div class="hero-nav-links">
+            <a href="#home" id="btn-home" class="btn primary magnetic btn-home">Home</a>
+            <a href="#about" class="btn primary magnetic">About</a>
+            <a href="#resume" class="btn primary magnetic">Resume</a>
+            <a href="#projects" class="btn primary magnetic">Projects</a>
+            <a href="#coding-profile" class="btn primary magnetic">Coding Profile</a>
+            <a href="#contact" class="btn primary magnetic">Contact</a>
+          </div>
+        </div>
+
+        <!-- Card Details displayed when shrunk in Split Mode -->
+        <div class="split-card-contact-info">
+          <a href="mailto:joinupshivam@gmail.com" class="card-info-row">
+            <svg class="info-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>joinupshivam@gmail.com</span>
+          </a>
+          <a href="tel:+918188990743" class="card-info-row">
+            <svg class="info-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>+91 8188990743</span>
+          </a>
+          <div class="card-info-row">
+            <svg class="info-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>India, Globally</span>
+          </div>
+          <div class="card-social-icons">
+            <a href="https://www.linkedin.com/in/xploreshivam/" target="_blank" rel="noopener noreferrer" class="social-icon-btn linkedin" aria-label="LinkedIn" title="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+            <a href="https://github.com/xploreshivam" target="_blank" rel="noopener noreferrer" class="social-icon-btn github" aria-label="GitHub" title="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="https://x.com/XploreShivam" target="_blank" rel="noopener noreferrer" class="social-icon-btn twitter" aria-label="Twitter" title="Twitter / X">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="social-icon-btn facebook" aria-label="Facebook" title="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Animated Email Display -->
+      <div class="hero-email-display">joinupshivam@gmail.com</div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2 data-aos="fade-up">About</h2>
+        <div class="about-premium-content">
+          <!-- Text Column wrapped in Glass -->
+          <div class="about-glass-card" data-aos="fade-right" data-aos-delay="100">
+            <p class="about-text-lead">
+              I’m <span class="highlight">SHIVAM CHAUHAN</span>, a third-year Computer Science undergraduate at <span class="highlight">Invertis University Bareilly</span> and an aspiring <span class="highlight">Software Development Engineer (SDE)</span>. I’m passionate about building scalable software solutions that combine clean code, efficient system design, and reliable backend architecture.
+            </p>
+            <p>
+              I enjoy solving complex engineering problems and developing end-to-end applications. My focus is on <span class="highlight">Data Structures & Algorithms (DSA)</span>, <span class="highlight">Object-Oriented Programming (OOP)</span>, System Design fundamentals, and Full-Stack Development, while writing clean, maintainable, and efficient code.
+            </p>
+            <p>
+              I continuously strengthen my problem-solving skills by building real-world projects, practicing competitive programming, and exploring modern software engineering practices to develop optimized solutions with a strong analytical mindset.
+            </p>
+            <p>
+              Currently, I’m expanding my technical expertise, building impactful projects, and actively seeking <span class="highlight">Software Engineering internships</span> and entry-level <span class="highlight">SDE opportunities</span> where I can contribute to real-world products while growing as a software engineer.
+            </p>
+          </div>
+
+          <!-- What I'm Doing Section (Separate Card) -->
+          <div class="what-im-doing-section" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="doing-heading">What I'm doing</h3>
+            <div class="doing-chips-grid">
+              <div class="doing-chip-card">
+                <span class="doing-chip-title">Data Structures & Algorithms</span>
+                <p class="doing-chip-desc">Solving complex engineering problems using optimized algorithms, clean logic, and strong core CS fundamentals.</p>
+              </div>
+              <div class="doing-chip-card">
+                <span class="doing-chip-title">Full-Stack Engineering</span>
+                <p class="doing-chip-desc">Architecting scalable, end-to-end web applications with performant frontend interfaces and reliable backend APIs.</p>
+              </div>
+              <div class="doing-chip-card">
+                <span class="doing-chip-title">3rd year Undergraduate</span>
+                <p class="doing-chip-desc">Pursuing B.Tech CSE at Invertis University Bareilly</p>
+              </div>
+              <div class="doing-chip-card">
+                <span class="doing-chip-title">Opportunities & Collaboration</span>
+                <p class="doing-chip-desc">Actively seeking Software Engineering Internships and high-impact Freelance / Client Projects.</p>
+              </div>
+            </div>
+          </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 data-aos="fade-up">Projects</h2>
+        <div class="projects-grid">
+          <article class="card project-card standard-project-card">
+            <a class="card-media" href="https://machine-learninig-e1e9.onrender.com/" target="_blank" rel="noreferrer">
+              <img src="smart-agri.svg" alt="Smart Agriculture Analytic System" width="600" height="340" loading="lazy" decoding="async" />
+            </a>
+            <div class="card-body">
+              <h3 class="card-title">Smart Agriculture Analytic System</h3>
+              <p class="card-text">Machine learning driven analytics platform providing real-time agricultural data, soil insights, and crop yield predictions.</p>
+              <div class="tags">
+                <span>Python</span><span>Machine Learning</span><span>Data Analytics</span>
+              </div>
+              <div class="card-actions">
+                <a href="https://machine-learninig-e1e9.onrender.com/" class="btn small magnetic" target="_blank" rel="noreferrer">Live</a>
+                <a href="https://github.com/xploreshivam/Smart_Agriculture_Analytic_System" class="btn small outline magnetic" target="_blank" rel="noreferrer">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card standard-project-card">
+            <a class="card-media" href="#" target="_blank" rel="noreferrer">
+              <img src="project-beta.png" alt="Project Beta Landing Page" width="600" height="340" loading="lazy" decoding="async" />
+            </a>
+            <div class="card-body">
+              <h3 class="card-title">Hostel Management System (NexStayy)</h3>
+              <p class="card-text">Automated web application for room allocation, resident record tracking, role-based access control, and administrative reporting dashboards.</p>
+              <div class="tags">
+                <span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>REST API</span>
+              </div>
+              <div class="card-actions">
+                <a href="https://nexstayy.netlify.app/" class="btn small magnetic" target="_blank" rel="noreferrer">Live</a>
+                <a href="https://github.com/xploreshivam/Hostel_Management_System" class="btn small outline magnetic" target="_blank" rel="noreferrer">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card standard-project-card">
+            <a class="card-media" href="#" target="_blank" rel="noreferrer">
+              <img src="project-gamma.png" alt="Project Gamma Design System" width="600" height="340" loading="lazy" decoding="async" />
+            </a>
+            <div class="card-body">
+              <h3 class="card-title">Project Gamma</h3>
+              <p class="card-text">Design system starter with tokens, theming, and component primitives.</p>
+              <div class="tags">
+                <span>Design Tokens</span><span>Storybook</span><span>CSS Vars</span>
+              </div>
+              <div class="card-actions">
+                <a href="#" class="btn small magnetic" target="_blank" rel="noreferrer">Live</a>
+                <a href="#" class="btn small outline magnetic" target="_blank" rel="noreferrer">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4TH SPECIAL CARD: DEVELOPER'S MINI PROJECTS ZIP VAULT -->
+          <article class="card project-card notebook-vault-card" id="open-notebook-card">
+            <div class="notebook-vault-inner">
+              <div class="notebook-spine"></div>
+              <div class="notebook-vault-top-row" style="display:flex; justify-content:space-between; align-items:center; width:100%; margin-bottom:8px;">
+                <h3 class="notebook-vault-title" style="margin:0;">MINI Projects.zip</h3>
+              </div>
+              
+              <!-- CREATIVE 3D ANIMATED ZIP FILE SHOWCASE -->
+              <div class="notebook-3d-showcase">
+                <div class="book-aura-glow"></div>
+                <div class="zip-file-box">
+                  <div class="zip-folder-back"></div>
+                  <div class="zip-file-item file-3"><span>📄 app.js</span></div>
+                  <div class="zip-file-item file-2"><span>🎨 style.css</span></div>
+                  <div class="zip-file-item file-1"><span>⚡ mini-projects.zip</span></div>
+                  <div class="zip-folder-front">
+                    <div class="zip-zipper-line">
+                      <span class="zip-teeth"></span>
+                      <span class="zip-puller">
+                        <svg class="zip-puller-svg" viewBox="0 0 12 20" width="12" height="20" fill="none">
+                          <rect x="2" y="1" width="8" height="5" rx="1.5" fill="#fbbf24" stroke="#d97706" stroke-width="1"/>
+                          <path d="M6 6v7M3 13h6l-3 5-3-5z" fill="#fbbf24" stroke="#d97706" stroke-width="1" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="zip-clean-logo">
+                      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                        <polyline points="12 11 12 17 9 14"></polyline>
+                        <polyline points="12 17 15 14"></polyline>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- 5TH SPECIAL CARD: CASE STUDIES VAULT -->
+          <article class="card project-card notebook-vault-card case-studies-card" id="open-case-studies-card">
+            <div class="notebook-vault-inner">
+              <div class="notebook-spine case-spine"></div>
+              <div class="notebook-vault-top-row" style="display:flex; justify-content:space-between; align-items:center; width:100%; margin-bottom:8px;">
+                <h3 class="notebook-vault-title" style="margin:0;">Case Studies.pdf</h3>
+              </div>
+              
+              <!-- CREATIVE 3D ANIMATED CASE STUDIES DOSSIER SHOWCASE -->
+              <div class="notebook-3d-showcase">
+                <div class="book-aura-glow case-aura"></div>
+                <div class="zip-file-box case-file-box">
+                  <div class="zip-folder-back case-folder-back"></div>
+                  <div class="zip-file-item file-3 case-file-3"><span>📊 System-Architecture.pdf</span></div>
+                  <div class="zip-file-item file-2 case-file-2"><span>🚀 Scalability-Audit.pdf</span></div>
+                  <div class="zip-file-item file-1 case-file-1"><span>💼 Case-Studies.pdf</span></div>
+                  <div class="zip-folder-front case-folder-front">
+                    <div class="zip-zipper-line case-zipper-line">
+                      <span class="zip-teeth"></span>
+                      <span class="zip-puller">
+                        <svg class="zip-puller-svg" viewBox="0 0 12 20" width="12" height="20" fill="none">
+                          <rect x="2" y="1" width="8" height="5" rx="1.5" fill="#60a5fa" stroke="#1d4ed8" stroke-width="1"/>
+                          <path d="M6 6v7M3 13h6l-3 5-3-5z" fill="#60a5fa" stroke="#1d4ed8" stroke-width="1" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="zip-clean-logo case-clean-logo">
+                      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="learning-path" class="section">
+      <div class="container">
+        <h2 data-aos="fade-up">Learning Path</h2>
+        <div class="learning-path-container" data-aos="fade-up" data-aos-delay="200">
+          <div class="learning-step completed featured">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>C</h3>
+              <p>Foundations of Programming</p>
+              <span class="step-status">✓ Completed - Jan 2023</span>
+            </div>
+          </div>
+
+          <div class="learning-step completed featured">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>C++</h3>
+              <p>OOP, DSA Mastery</p>
+              <span class="step-status">✓ Completed - Jun 2023</span>
+            </div>
+          </div>
+
+          <div class="learning-step completed">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Java</h3>
+              <p>Enterprise & System Design</p>
+              <span class="step-status">✓ Completed - Dec 2023</span>
+            </div>
+          </div>
+
+          <div class="learning-step in-progress">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3>Python</h3>
+              <p>Automation, AI, Scripting</p>
+              <span class="step-status">🔄 In Progress - 70% Complete</span>
+            </div>
+          </div>
+
+          <div class="learning-step">
+            <div class="step-number">5</div>
+            <div class="step-content">
+              <h3>Go</h3>
+              <p>Concurrency, Backend Systems</p>
+              <span class="step-status">⏳ Planned - Q1 2026</span>
+            </div>
+          </div>
+
+          <div class="learning-step">
+            <div class="step-number">6</div>
+            <div class="step-content">
+              <h3>Kotlin</h3>
+              <p>Modern Android + Cross-Platform</p>
+              <span class="step-status">⏳ Planned - Q2 2026</span>
+            </div>
+          </div>
+
+          <div class="learning-step">
+            <div class="step-number">7</div>
+            <div class="step-content">
+              <h3>Swift</h3>
+              <p>iOS & Apple Ecosystem</p>
+              <span class="step-status">⏳ Planned - Q3 2026</span>
+            </div>
+          </div>
+
+          <div class="learning-step">
+            <div class="step-number">8</div>
+            <div class="step-content">
+              <h3>SQL</h3>
+              <p>Database Design, Query Optimization</p>
+              <span class="step-status">⏳ Planned - Q4 2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resume" class="section">
+      <div class="container">
+        <h2 data-aos="fade-up">Resume</h2>
+        
+        <div class="resume-paper-card" data-aos="fade-up">
+          <!-- Top Right Download Button -->
+          <a href="resume.pdf" download class="resume-download-btn-top magnetic" title="Download PDF Resume" aria-label="Download PDF Resume">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </a>
+
+          <!-- Education Section -->
+          <div class="resume-section">
+            <h3 class="resume-sec-heading">Education</h3>
+            <div class="resume-timeline">
+              <div class="resume-item">
+                <div class="resume-item-header">
+                  <span class="resume-item-title">B.Tech in Computer Science & Engineering</span>
+                  <span class="resume-item-date">2024 - Present</span>
+                </div>
+                <div class="resume-item-sub">Invertis University, Bareilly</div>
+              </div>
+
+              <div class="resume-item">
+                <div class="resume-item-header">
+                  <span class="resume-item-title">Class 12th - UP Board</span>
+                  <span class="resume-item-date">2023 - 2024</span>
+                </div>
+                <div class="resume-item-sub">Ramhit Memorial Inter College, Jaunpur</div>
+              </div>
+
+              <div class="resume-item">
+                <div class="resume-item-header">
+                  <span class="resume-item-title">Class 10th - UP Board</span>
+                  <span class="resume-item-date">2020 - 2021</span>
+                </div>
+                <div class="resume-item-sub">Ramhit Memorial Inter College, Jaunpur</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Section -->
+          <div class="resume-section">
+            <h3 class="resume-sec-heading">Experience</h3>
+            <div class="resume-timeline">
+              <div class="resume-item">
+                <div class="resume-item-header">
+                  <span class="resume-item-title">Full Stack Web Developer & Open Source Contributor</span>
+                  <span class="resume-item-date">2024 - Present</span>
+                </div>
+                <div class="resume-item-sub">Freelance & Personal Projects</div>
+                <p class="resume-item-desc">
+                  Architecting and developing modern responsive web applications using React, Next.js, Node.js, and TypeScript. Created high-performance UI components, interactive web tools, and data dashboards.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- My Skills Section -->
+          <div class="resume-section">
+            <h3 class="resume-sec-heading">My Skills</h3>
+            <div class="resume-skills-categories">
+              <div class="resume-skill-cat" style="display: flex; flex-direction: column; gap: 10px; padding: 16px;">
+                <div class="skill-group">
+                  <div class="cat-pills">
+                    <span>Java</span>
+                    <span>C</span>
+                    <span>Python</span>
+                    <span>JavaScript</span>
+                    <span>TypeScript</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>React</span>
+                    <span>Next.js</span>
+                    <span>Tailwind CSS</span>
+                    <span>Node.js</span>
+                    <span>Express.js</span>
+                    <span>MongoDB</span>
+                    <span>SQL</span>
+                    <span>Firebase</span>
+                    <span>REST APIs</span>
+                    <span>Git</span>
+                    <span>GitHub</span>
+                    <span>Data Structures & Algorithms</span>
+                    <span>Object-Oriented Programming (OOP)</span>
+                    <span>DBMS</span>
+                    <span>Operating Systems</span>
+                    <span>Computer Networks</span>
+                    <span>System Design (Basics)</span>
+                    <span>Competitive Programming</span>
+                    <span>Responsive Design</span>
+                    <span>Web Performance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="coding-profile" class="section">
+      <div class="container">
+        <h2 data-aos="fade-up">Coding Profiles</h2>
+        
+        <div class="coding-grid">
+          <!-- LeetCode Card -->
+          <a href="https://leetcode.com/u/joinupshivam/" target="_blank" rel="noopener noreferrer" class="coding-card leetcode-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="coding-card-header">
+              <div class="coding-icon leetcode">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863 0-.713.235-1.357.702-1.824l4.319-4.38c.467-.467 1.125-.645 1.837-.645s1.357.195 1.823.662l2.697 2.606c.514.515 1.365.497 1.9-.038.535-.536.553-1.387.039-1.901l-2.609-2.636a5.008 5.008 0 00-3.85-1.48c-1.452 0-2.835.586-3.85 1.602l-4.319 4.38a5.405 5.405 0 00-1.601 3.85c0 1.453.586 2.836 1.601 3.851l4.332 4.363c1.015 1.015 2.398 1.601 3.85 1.601s2.835-.586 3.85-1.601l2.609-2.637c.514-.514.496-1.365-.039-1.9-.535-.535-1.386-.553-1.9-.038z"/>
+                  <path d="M10.802 3.53a1.314 1.314 0 00-1.85 0l-1.387 1.387a1.314 1.314 0 000 1.851c.515.514 1.336.514 1.85 0l1.387-1.387a1.314 1.314 0 000-1.851zm10.963 8.163l-8.528-8.528a1.314 1.314 0 00-1.85 0l-1.387 1.387a1.314 1.314 0 000 1.85l8.528 8.528a1.314 1.314 0 001.85 0l1.387-1.387a1.314 1.314 0 000-1.85z"/>
+                </svg>
+              </div>
+              <div class="coding-card-title">
+                <h3>LeetCode</h3>
+              </div>
+            </div>
+            <p class="coding-desc">DSA & Problem Solving</p>
+          </a>
+
+          <!-- GitHub Card -->
+          <a href="https://github.com/xploreshivam" target="_blank" rel="noopener noreferrer" class="coding-card github-card" data-aos="fade-up" data-aos-delay="150">
+            <div class="coding-card-header">
+              <div class="coding-icon github">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+              </div>
+              <div class="coding-card-title">
+                <h3>GitHub</h3>
+              </div>
+            </div>
+            <p class="coding-desc">Open Source Projects</p>
+          </a>
+
+          <!-- GeeksforGeeks Card -->
+          <a href="https://www.geeksforgeeks.org/profile/shivamchauhan003" target="_blank" rel="noopener noreferrer" class="coding-card gfg-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="coding-card-header">
+              <div class="coding-icon gfg">
+                <span style="font-size: 16px; font-weight: 900; color: #22c55e;">GFG</span>
+              </div>
+              <div class="coding-card-title">
+                <h3>GeeksforGeeks</h3>
+              </div>
+            </div>
+            <p class="coding-desc">CS Fundamentals Practice</p>
+          </a>
+
+          <!-- HackerRank Card -->
+          <a href="https://www.hackerrank.com/profile/joinupshivam" target="_blank" rel="noopener noreferrer" class="coding-card hackerrank-card" data-aos="fade-up" data-aos-delay="250">
+            <div class="coding-card-header">
+              <div class="coding-icon hackerrank">
+                <span style="font-size: 16px; font-weight: 900; color: #10b981;">HR</span>
+              </div>
+              <div class="coding-card-title">
+                <h3>HackerRank</h3>
+              </div>
+            </div>
+            <p class="coding-desc">5-Star Problem Solving</p>
+          </a>
+
+          <!-- Codolio Card -->
+          <a href="https://codolio.com/profile/xploreshivam" target="_blank" rel="noopener noreferrer" class="coding-card codolio-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="coding-card-header">
+              <div class="coding-icon codolio">
+                <span style="font-size: 15px; font-weight: 900; color: #a855f7;">COD</span>
+              </div>
+              <div class="coding-card-title">
+                <h3>Codolio</h3>
+              </div>
+            </div>
+            <p class="coding-desc">Unified Developer Profile</p>
+          </a>
+
+          <!-- CodeChef Card -->
+          <a href="https://www.codechef.com/users/xploreshivam" target="_blank" rel="noopener noreferrer" class="coding-card codechef-card" data-aos="fade-up" data-aos-delay="350">
+            <div class="coding-card-header">
+              <div class="coding-icon codechef">
+                <span style="font-size: 15px; font-weight: 900; color: #d97706;">CC</span>
+              </div>
+              <div class="coding-card-title">
+                <h3>CodeChef</h3>
+              </div>
+            </div>
+            <p class="coding-desc">Contest Problem Solving</p>
+          </a>
+
+          <!-- Codeforces Card -->
+          <a href="https://www.codeforces.com/profile/xploreshivam" target="_blank" rel="noopener noreferrer" class="coding-card codeforces-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="coding-card-header">
+              <div class="coding-icon codeforces">
+                <span style="font-size: 15px; font-weight: 900; color: #3b82f6;">CF</span>
+              </div>
+              <div class="coding-card-title">
+                <h3>Codeforces</h3>
+              </div>
+            </div>
+            <p class="coding-desc">Competitive Programming Contests</p>
+          </a>
+
+          <!-- Coding Ninjas Card -->
+          <a href="https://www.naukri.com/code360/profile/xploreshivam" target="_blank" rel="noopener noreferrer" class="coding-card codingninjas-card" data-aos="fade-up" data-aos-delay="450">
+            <div class="coding-card-header">
+              <div class="coding-icon coding-ninjas">
+                <span style="font-size: 15px; font-weight: 900; color: #f97316;">CN</span>
+              </div>
+              <div class="coding-card-title">
+                <h3>Coding Ninjas</h3>
+              </div>
+            </div>
+            <p class="coding-desc">Data Structures Practice</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact-header-wrap" data-aos="fade-up">
+          <div class="connect-status-badge">
+            <span class="status-pulse-dot"></span> Available for Freelance & Full-time Roles
+          </div>
+          <h2>Let's Work Together</h2>
+          <p class="contact-subtitle">Have a project in mind, a question, or just want to say hi? Feel free to reach out!</p>
+        </div>
+
+        <div class="contact-layout" data-aos="fade-up" data-aos-delay="100">
+          <div class="contact-info">
+            <div class="contact-card">
+              <div class="contact-icon">📧</div>
+              <div class="contact-card-text">
+                <h3>Direct Email</h3>
+                <p><a href="mailto:shivammiui5g@gmail.com">shivammiui5g@gmail.com</a></p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">📍</div>
+              <div class="contact-card-text">
+                <h3>Location</h3>
+                <p>India — Working Globally</p>
+              </div>
+            </div>
+
+            <div class="social-connect-card">
+              <div class="social-card-header">
+                <h3>Connect With Me</h3>
+                <span class="fast-reply-badge">⚡ Quick Response</span>
+              </div>
+              <p class="social-card-desc">Follow my work, check my code, or connect on social platforms:</p>
+              <div class="social-grid-buttons">
+                <a href="https://github.com/mrshivam003" class="social-connect-btn github" target="_blank" rel="noopener noreferrer">
+                  <div class="social-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                  </div>
+                  <div class="social-info">
+                    <span class="social-title">GitHub</span>
+                    <span class="social-handle">@mrshivam003</span>
+                  </div>
+                  <span class="social-arrow">↗</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/shivam-chauhan-2007b2231/" class="social-connect-btn linkedin" target="_blank" rel="noopener noreferrer">
+                  <div class="social-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                  </div>
+                  <div class="social-info">
+                    <span class="social-title">LinkedIn</span>
+                    <span class="social-handle">Shivam Chauhan</span>
+                  </div>
+                  <span class="social-arrow">↗</span>
+                </a>
+
+                <a href="https://x.com/Shivamsingh_003" class="social-connect-btn twitter" target="_blank" rel="noopener noreferrer">
+                  <div class="social-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                  </div>
+                  <div class="social-info">
+                    <span class="social-title">X (Twitter)</span>
+                    <span class="social-handle">@Shivamsingh_003</span>
+                  </div>
+                  <span class="social-arrow">↗</span>
+                </a>
+
+                <a href="mailto:shivammiui5g@gmail.com" class="social-connect-btn mail">
+                  <div class="social-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </div>
+                  <div class="social-info">
+                    <span class="social-title">Email Me</span>
+                    <span class="social-handle">shivammiui5g@gmail.com</span>
+                  </div>
+                  <span class="social-arrow">↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-wrapper">
+            <h3 class="form-title">Send a Message</h3>
+            <form id="contact-form" class="form" novalidate>
+              <div class="field">
+                <label for="name">Your Name</label>
+                <input id="name" name="name" type="text" placeholder="John Doe" autocomplete="name" required />
+                <small class="error" data-for="name"></small>
+              </div>
+              <div class="field">
+                <label for="email">Your Email</label>
+                <input id="email" name="email" type="email" placeholder="john@example.com" autocomplete="email" required />
+                <small class="error" data-for="email"></small>
+              </div>
+              <div class="field">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Hi Shivam, I'd like to talk about..." required></textarea>
+                <small class="error" data-for="message"></small>
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn primary magnetic send-btn">
+                  <span>Send Message</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+                <p id="form-status" role="status" aria-live="polite"></p>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="resume-download-card active-v2" data-aos="flip-up" data-aos-delay="300">
+          <a href="resume.pdf" class="btn-v2-resume" download>
+            <span>Download Full Resume</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> SHIVAM CHAUHAN</p>
+      <div class="footer-social-buttons">
+        <a href="https://github.com/xploreshivam" class="footer-social-btn github" target="_blank"
+          rel="noopener noreferrer" aria-label="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+          </svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/shivam-chauhan-2007b2231/" class="footer-social-btn linkedin"
+          target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+          </svg>
+          LinkedIn
+        </a>
+        <a href="https://x.com/Shivamsingh_003" class="footer-social-btn twitter" target="_blank"
+          rel="noopener noreferrer" aria-label="Twitter">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+          </svg>
+          Twitter
+        </a>
+      </div>
+    </div>
+    <!-- Snake Removed -->
+  </footer>
+
+  <!-- =========================================
+       SPLIT-SCREEN RIGHT CONTENT PANEL
+       ========================================= -->
+  <div id="split-right-panel" class="split-right-panel" aria-hidden="true" inert>
+    <div class="split-panel-header">
+      <h2 id="split-panel-title" class="split-panel-title">About</h2>
+      <button id="split-panel-close" class="split-panel-close" type="button" aria-label="Close panel">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+        <span>Back to Home</span>
+      </button>
+    </div>
+    <div id="split-panel-body" class="split-panel-body">
+      <!-- Active section content dynamically rendered here -->
+    </div>
+    <div class="split-panel-footer">
+      <div class="split-nav-bottom-row">
+        <a href="#home" class="btn primary magnetic split-bottom-btn">Home</a>
+        <a href="#about" class="btn primary magnetic split-bottom-btn">About</a>
+        <a href="#resume" class="btn primary magnetic split-bottom-btn">Resume</a>
+        <a href="#projects" class="btn primary magnetic split-bottom-btn">Projects</a>
+        <a href="#coding-profile" class="btn primary magnetic split-bottom-btn">Coding Profile</a>
+        <a href="#contact" class="btn primary magnetic split-bottom-btn">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================
+       DEVELOPER'S MINI PROJECTS NOTEBOOK MODAL
+       ========================================= -->
+  <div id="notebook-modal" class="notebook-modal-overlay" aria-hidden="true" inert>
+    <div class="notebook-modal-container">
+      <!-- Spiral Binder Ring Elements -->
+      <div class="notebook-spirals">
+        <span class="ring"></span><span class="ring"></span><span class="ring"></span><span class="ring"></span><span class="ring"></span>
+        <span class="ring"></span><span class="ring"></span><span class="ring"></span><span class="ring"></span><span class="ring"></span>
+      </div>
+
+      <!-- Notebook Parchment Page Body -->
+      <div class="notebook-paper-page">
+        <!-- Header -->
+        <div class="notebook-modal-header" style="flex-direction:column; align-items:stretch; gap:12px;">
+          <div class="notebook-header-top" style="display:flex; justify-content:space-between; align-items:center;">
+            <div class="notebook-header-info">
+              <h2 id="notebook-modal-title">My Mini Projects</h2>
+            </div>
+            <div style="display:flex; align-items:center; gap:16px;">
+              <button type="button" id="close-notebook-btn" class="notebook-modal-close" aria-label="Close Notebook">&times;</button>
+            </div>
+          </div>
+
+          <!-- Controls Bar: Filter Tabs & Search -->
+          <div class="notebook-modal-controls" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-top:4px;">
+            <div class="nb-tabs-wrap" style="display:flex; gap:6px;">
+              <button type="button" class="nb-tab-btn active" data-filter="all">All Mini Apps</button>
+              <button type="button" class="nb-tab-btn" data-filter="utility">Utility</button>
+              <button type="button" class="nb-tab-btn" data-filter="creative">Creative</button>
+            </div>
+            <div class="nb-search-wrap" style="position:relative; display:flex; align-items:center; min-width:220px; flex:1; max-width:320px;">
+              <input type="text" id="nb-search-input" placeholder="Search mini apps & tags..." style="width:100%; padding:6px 28px 6px 12px; border-radius:16px; border:1px solid var(--border); background:rgba(0,0,0,0.3); color:var(--text); font-size:0.85rem;" />
+              <button type="button" id="nb-search-clear-btn" style="position:absolute; right:8px; background:none; border:none; color:var(--muted); cursor:pointer; display:none;">&times;</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Grid Container -->
+        <div class="gallery-grid-wrapper">
+          <div class="gallery-grid" id="mini-gallery-grid">
+            <!-- Populated dynamically by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!-- =========================================
+       ENGINEERING CASE STUDIES DOSSIER MODAL
+       ========================================= -->
+  <div id="case-studies-modal" class="notebook-modal-overlay case-studies-modal-overlay" aria-hidden="true" inert>
+    <div class="notebook-modal-container case-modal-container">
+      <div class="notebook-spirals case-spirals">
+        <span class="ring"></span><span class="ring"></span><span class="ring"></span><span class="ring"></span><span class="ring"></span>
+        <span class="ring"></span><span class="ring"></span><span class="ring"></span><span class="ring"></span><span class="ring"></span>
+      </div>
+
+      <div class="notebook-paper-page case-paper-page">
+        <!-- Header -->
+        <div class="notebook-modal-header" style="flex-direction:column; align-items:stretch; gap:12px;">
+          <div class="notebook-header-top" style="display:flex; justify-content:space-between; align-items:center;">
+            <div class="notebook-header-info">
+              <h2 id="case-modal-title">Technical Case Studies</h2>
+            </div>
+            <div style="display:flex; align-items:center; gap:16px;">
+              <button type="button" id="close-case-studies-btn" class="notebook-modal-close" aria-label="Close Case Studies">&times;</button>
+            </div>
+          </div>
+
+          <!-- Controls Bar: Filter Tabs & Search -->
+          <div class="notebook-modal-controls" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-top:4px;">
+            <div class="cs-tabs-wrap" style="display:flex; gap:6px;">
+              <button type="button" class="cs-tab-btn active" data-cs-filter="all">All Studies</button>
+              <button type="button" class="cs-tab-btn" data-cs-filter="architecture">Architecture</button>
+              <button type="button" class="cs-tab-btn" data-cs-filter="performance">Performance & AI</button>
+            </div>
+            <div class="cs-search-wrap" style="position:relative; display:flex; align-items:center; min-width:220px; flex:1; max-width:320px;">
+              <input type="text" id="cs-search-input" placeholder="Search case studies, stacks..." style="width:100%; padding:6px 28px 6px 12px; border-radius:16px; border:1px solid var(--border); background:rgba(0,0,0,0.3); color:var(--text); font-size:0.85rem;" />
+              <button type="button" id="cs-search-clear-btn" style="position:absolute; right:8px; background:none; border:none; color:var(--muted); cursor:pointer; display:none;">&times;</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case Studies Grid Container -->
+        <div class="gallery-grid-wrapper">
+          <div class="gallery-grid case-studies-grid" id="case-studies-gallery-grid">
+            <!-- Populated dynamically by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- GSAP Core -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <!-- GSAP ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <!-- GSAP ScrollToPlugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js" defer></script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="script.js" defer></script>
+
+</body>
+
+</html>

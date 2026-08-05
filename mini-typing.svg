@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%" style="background:#090d16; font-family: system-ui, sans-serif;">
+  <rect width="800" height="450" fill="#090d16" />
+  <text x="400" y="50" fill="#a855f7" font-size="22" font-weight="800" text-anchor="middle">60s Developer Typing Test ⚡</text>
+
+  <!-- Speedometer Stats Bar -->
+  <g transform="translate(150, 90)">
+    <rect width="230" height="90" rx="12" fill="#131c2e" stroke="#1d2d4a" />
+    <text x="115" y="40" fill="#94a3b8" font-size="13" text-anchor="middle">TYPING SPEED</text>
+    <text x="115" y="72" fill="#38bdf8" font-size="32" font-weight="900" text-anchor="middle">92 WPM</text>
+
+    <rect x="270" y="0" width="230" height="90" rx="12" fill="#131c2e" stroke="#1d2d4a" />
+    <text x="385" y="40" fill="#94a3b8" font-size="13" text-anchor="middle">ACCURACY</text>
+    <text x="385" y="72" fill="#10b981" font-size="32" font-weight="900" text-anchor="middle">98.5%</text>
+  </g>
+
+  <!-- Code Snippet Area -->
+  <rect x="100" y="210" width="600" height="150" rx="12" fill="#0f172a" stroke="#334155" />
+  <text x="130" y="250" fill="#10b981" font-size="16" font-family="monospace">const app = new DeveloperPortfolio({</text>
+  <text x="130" y="280" fill="#38bdf8" font-size="16" font-family="monospace">  name: 'Shivam', speed: 'fast'</text>
+  <text x="130" y="310" fill="#10b981" font-size="16" font-family="monospace">});</text>
+
+  <line x1="395" y1="262" x2="395" y2="285" stroke="#a855f7" stroke-width="3" />
+</svg>
