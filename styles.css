@@ -352,7 +352,7 @@ h3 {
   gap: 12px;
 }
 
-/* Version 9: The Liquid Silver */
+/* The Liquid Silver */
 .resume-btn {
   position: relative;
   display: inline-flex;
@@ -609,7 +609,7 @@ body.light-theme #hero-canvas {
   }
 }
 
-/* --- Background Marquee V1.1 --- */
+/* --- Background Marquee --- */
 .hero-marquee {
   position: absolute;
   top: 50%;
@@ -834,7 +834,7 @@ body.light-theme .theme-toggle {
   }
 }
 
-/* Hero Email Display - Terminal V1.3 (Interactive Copy) */
+/* Hero Email Display */
 .hero-email-display {
   position: absolute;
   bottom: 40px;
@@ -910,7 +910,7 @@ body.light-theme .theme-toggle {
   }
 }
 
-/* --- Theme Toggle V2 (Best) --- */
+/* --- Theme Toggle --- */
 .theme-toggle {
   position: relative;
   width: 44px;
@@ -1005,7 +1005,7 @@ body.light-theme .nav-list a:hover {
   overflow: hidden;
 }
 
-/* Retain sweep animation from V6.1 logic */
+/* Retain sweep animation  */
 body.light-theme .nav-list a:hover::after {
   content: '';
   position: absolute;
@@ -1021,7 +1021,7 @@ body.light-theme .nav-list a:hover::after {
   border-radius: 0;
 }
 
-/* --- Footer 3D Procedural Snack (Three.js) --- */
+
 .site-footer {
   position: relative;
   overflow: hidden;
@@ -1240,333 +1240,6 @@ body.light-theme .name-gradient-animated {
     font-size: 0.9rem;
   }
 }
-
-/* --- Hero Style 6: Bento Grid --- */
-/*#hero-style-6 {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 100px 20px 60px;
-  background: #0a0a0a;
-  /* Dark background */
-/*  font-family: 'Inter', sans-serif;
-  color: #fff;
-}
-
-.bento-wrapper {
-  width: 100%;
-  max-width: 1100px;
-}
-
-.bento-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 300px);
-  gap: 24px;
-}
-
-/* Base Card Style */
-/*.bento-card {
-  background: #111;
-  border: 1px solid #222;
-  border-radius: 32px;
-  overflow: hidden;
-  position: relative;
-  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-  display: flex;
-  flex-direction: column;
-}
-
-.bento-card:hover {
-  transform: translateY(-4px);
-  border-color: #333;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-}
-
-/* 1. Intro Card (Large) */
-/*.b-intro {
-  grid-column: span 2;
-  grid-row: span 1;
-  padding: 40px;
-  justify-content: center;
-  background: linear-gradient(145deg, #111, #161616);
-}
-
-.bento-badge {
-  display: inline-block;
-  padding: 6px 14px;
-  background: rgba(34, 197, 94, 0.1);
-  color: #22c55e;
-  border-radius: 100px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin-bottom: 24px;
-}
-
-.bento-title {
-  font-size: 3rem;
-  font-weight: 800;
-  line-height: 1;
-  margin-bottom: 16px;
-  background: linear-gradient(to right, #fff, #888);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.bento-desc {
-  color: #888;
-  font-size: 1.1rem;
-  max-width: 320px;
-  margin-bottom: 32px;
-}
-
-.bento-actions {
-  display: flex;
-  gap: 16px;
-}
-
-.bento-btn {
-  padding: 12px 24px;
-  border-radius: 12px;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 0.95rem;
-  transition: 0.2s;
-}
-
-.primary-b {
-  background: #fff;
-  color: #000;
-}
-
-.primary-b:hover {
-  background: #e0e0e0;
-}
-
-.outline-b {
-  border: 1px solid #333;
-  color: #fff;
-}
-
-.outline-b:hover {
-  border-color: #666;
-  background: rgba(255, 255, 255, 0.05);
-}
-
-
-/* 2. Photo Card */
-/*.b-photo {
-  grid-column: span 1;
-  grid-row: span 1;
-  position: relative;
-}
-
-.b-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s;
-}
-
-.b-photo:hover .b-img {
-  transform: scale(1.05);
-}
-
-.photo-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-  z-index: 1;
-}
-
-.photo-caption {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  z-index: 2;
-  font-size: 0.9rem;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-/* 3. Tech Stack (Marquee) */
-/*.b-stack {
-  grid-column: span 2;
-  grid-row: span 1;
-  background: #0f0f0f;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.stack-label {
-  padding: 24px 32px 0;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #666;
-  text-transform: uppercase;
-}
-
-.stack-marquee {
-  width: 100%;
-  padding: 40px 0;
-  overflow: hidden;
-  position: relative;
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-}
-
-.stack-track {
-  display: flex;
-  white-space: nowrap;
-  gap: 40px;
-  animation: bentoScroll 20s linear infinite;
-}
-
-.stack-track span {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #444;
-  transition: 0.3s;
-  cursor: default;
-}
-
-.stack-track span:hover {
-  color: #fff;
-  transform: scale(1.1);
-}
-
-@keyframes bentoScroll {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-/* 4. Socials */
-/*.b-social {
-  grid-column: span 1;
-  grid-row: span 1;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 1fr);
-  background: #000;
-}
-
-.social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  transition: 0.3s;
-  border-bottom: 1px solid #1a1a1a;
-}
-
-.social-link:last-child {
-  border-bottom: none;
-}
-
-.social-link:hover {
-  background: #111;
-  color: #fff;
-}
-
-.social-link svg {
-  width: 28px;
-  height: 28px;
-}
-
-
-/* 5. Stats */
-/*.b-stats {
-  grid-column: span 1;
-  grid-row: span 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 32px;
-  background: #161616;
-}
-
-.stat-item {
-  text-align: center;
-}
-
-.stat-num {
-  display: block;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #fff;
-  line-height: 1;
-}
-
-.stat-lbl {
-  font-size: 0.9rem;
-  color: #666;
-  margin-top: 4px;
-}
-
-
-/* Responsive */
-/*@media (max-width: 1024px) {
-  .bento-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-  }
-
-  .b-intro {
-    grid-column: span 2;
-  }
-
-  .b-stack {
-    grid-column: span 2;
-    order: 5;
-  }
-}
-
-@media (max-width: 640px) {
-  .bento-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .b-intro,
-  .b-stack,
-  .b-photo,
-  .b-social,
-  .b-stats {
-    grid-column: span 1;
-  }
-
-  .bento-title {
-    font-size: 2.5rem;
-  }
-
-  /* Ensure social links are horizontal on mobile if stacked card is too tall, 
-     but vertical list is fine too. Or changing to flex row: */
-/*  .b-social {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    height: 100px;
-  }
-
-  .social-link {
-    border-bottom: none;
-    border-right: 1px solid #1a1a1a;
-  }
-
-  .social-link:last-child {
-    border-right: none;
-  }
-}*/
-
 
 @media (max-width: 640px) {
   .glassy-card-section::before {
