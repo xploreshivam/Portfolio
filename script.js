@@ -2,7 +2,6 @@
 // SHIVAM CHAUHAN — PORTFOLIO 
 // ============================
 
-// 1. THIRD-PARTY INITIALIZATIONS WITH DEFENSIVE GUARDS
 if (typeof AOS !== 'undefined') {
   AOS.init({
     duration: 800,
@@ -19,7 +18,7 @@ if (typeof gsap !== 'undefined') {
 }
 
 
-// 2. THEME & GENERAL UTILITIES
+//  THEME & GENERAL UTILITIES
 function escapeHTML(str) {
   if (!str) return '';
   return String(str)
@@ -50,7 +49,7 @@ if (yearEl) {
 }
 
 
-// 3. UI ANIMATIONS & MOUSE INTERACTIONS
+//  UI ANIMATIONS & MOUSE INTERACTIONS
 
 // Magnetic buttons
 document.querySelectorAll('.btn.magnetic').forEach(button => {
