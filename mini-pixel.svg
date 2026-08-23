@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%" style="background:#111827; font-family: system-ui, sans-serif;">
+  <rect width="800" height="450" fill="#111827" />
+  <text x="400" y="45" fill="#f43f5e" font-size="20" font-weight="800" text-anchor="middle">Retro Pixel Canvas Pad 🎨</text>
+
+  <!-- Color Palette bar -->
+  <rect x="250" y="70" width="300" height="36" rx="18" fill="#1f2937" />
+  <circle cx="280" cy="88" r="10" fill="#ef4444" />
+  <circle cx="310" cy="88" r="10" fill="#3b82f6" />
+  <circle cx="340" cy="88" r="10" fill="#10b981" />
+  <circle cx="370" cy="88" r="10" fill="#f59e0b" />
+  <circle cx="400" cy="88" r="10" fill="#8b5cf6" />
+  <circle cx="430" cy="88" r="10" fill="#ec4899" />
+  <circle cx="460" cy="88" r="10" fill="#ffffff" />
+  <circle cx="490" cy="88" r="10" fill="#000000" />
+
+  <!-- 16x16 Pixel Grid art mockup (Heart or Space invader) -->
+  <g transform="translate(280, 130)">
+    <rect width="240" height="240" fill="#1f2937" rx="8" stroke="#374151" stroke-width="2" />
+    <!-- Heart Pixel pattern -->
+    <rect x="30" y="60" width="30" height="30" fill="#ef4444" />
+    <rect x="60" y="60" width="30" height="30" fill="#ef4444" />
+    <rect x="120" y="60" width="30" height="30" fill="#ef4444" />
+    <rect x="150" y="60" width="30" height="30" fill="#ef4444" />
+
+    <rect x="15" y="90" width="30" height="30" fill="#ef4444" />
+    <rect x="45" y="90" width="30" height="30" fill="#f43f5e" />
+    <rect x="75" y="90" width="30" height="30" fill="#ef4444" />
+    <rect x="105" y="90" width="30" height="30" fill="#ef4444" />
+    <rect x="135" y="90" width="30" height="30" fill="#ef4444" />
+    <rect x="165" y="90" width="30" height="30" fill="#ef4444" />
+
+    <rect x="30" y="120" width="30" height="30" fill="#ef4444" />
+    <rect x="60" y="120" width="30" height="30" fill="#ef4444" />
+    <rect x="90" y="120" width="30" height="30" fill="#ef4444" />
+    <rect x="120" y="120" width="30" height="30" fill="#ef4444" />
+    <rect x="150" y="120" width="30" height="30" fill="#ef4444" />
+
+    <rect x="60" y="150" width="30" height="30" fill="#ef4444" />
+    <rect x="90" y="150" width="30" height="30" fill="#ef4444" />
+    <rect x="120" y="150" width="30" height="30" fill="#ef4444" />
+
+    <rect x="90" y="180" width="30" height="30" fill="#ef4444" />
+  </g>
+
+  <rect x="340" y="390" width="120" height="36" rx="18" fill="#10b981" />
+  <text x="400" y="413" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">Download PNG</text>
+</svg>

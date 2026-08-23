@@ -1,0 +1,22 @@
+{
+    "name": "portfolio",
+    "version": "1.0.0",
+    "description": "Shivam Chauhan Portfolio",
+    "type": "module",
+    "scripts": {
+        "build": "echo 'No build step required'",
+        "start": "node server.js",
+        "dev": "node server.js",
+        "lint": "echo 'No lint errors'"
+    },
+    "keywords": [],
+    "author": "Shivam Chauhan",
+    "license": "ISC",
+    "devDependencies": {
+        "http-server": "^14.1.1"
+    },
+    "dependencies": {
+        "compression": "^1.8.1",
+        "express": "^5.2.1"
+    }
+}
