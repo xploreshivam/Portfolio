@@ -915,16 +915,16 @@ if (mainForm) {
 (function initMiniProjectsVault() {
   const MINI_PROJECTS = [
     {
-      id: 'markdown-editor',
-      title: 'Live Markdown Previewer',
+      id: 'Click-Scorer',
+      title: 'Click Scorer',
       category: 'utility',
       categoryName: 'Utility',
       badgeClass: 'badge-utility',
       image: 'mini-markdown.svg',
-      desc: 'Instant side-by-side markdown renderer with character count, syntax highlighting, and HTML export.',
-      tags: ['JavaScript', 'RegEx', 'HTML5'],
-      liveUrl: '#',
-      codeUrl: 'https://github.com/xploreshivam'
+      desc: 'A fast-paced, CPS web app built with pure HTML5, CSS3, and Vanilla JavaScript with Web Audio feedback.',
+      tags: ['JavaScript', 'Css3', 'Vanilla', 'HTML5'],
+      liveUrl: 'https://clickscorer.netlify.app/',
+      codeUrl: 'https://github.com/xploreshivam/click-scorer'
     },
     {
       id: 'glass-generator',
