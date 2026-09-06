@@ -920,7 +920,7 @@ if (mainForm) {
       category: 'utility',
       categoryName: 'Utility',
       badgeClass: 'badge-utility',
-      image: 'mini-markdown.svg',
+      image: 'clickscorer.webp',
       desc: 'A fast-paced, CPS web app built with pure HTML5, CSS3, and Vanilla JavaScript with Web Audio feedback.',
       tags: ['JavaScript', 'Css3', 'Vanilla', 'HTML5'],
       liveUrl: 'https://clickscorer.netlify.app/',
