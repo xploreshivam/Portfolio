@@ -84,7 +84,8 @@ Ensure you have the following installed on your machine:
 
 ---
 
-##  Contribution Guidelines
+##  Contribution / reference / inspired own project Guidelines
+
 
 Contributions, issues, and feature requests are welcome!
 
