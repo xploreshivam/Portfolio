@@ -30,37 +30,6 @@ This project is a modern, modular web portfolio designed for full-stack develope
 
 ---
 
-##  Getting Started
-
-### Prerequisites
-
-Ensure you have the following installed on your machine:
-- [Node.js](https://nodejs.org/) (v16.x or higher)
-- [npm](https://www.npmjs.com/) (v8.x or higher)
-
-### Installation Steps
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/username/developer-portfolio.git
-   cd developer-portfolio
-   ```
-
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-
-3. **Start the development server**:
-   ```bash
-   npm start
-   ```
-
-4. **View in browser**:
-   Open `http://localhost:3000` in your web browser.
-
----
-
 ##  Usage Guide
 
 - **Navigating Sections**: Click any sidebar item or tab to switch between About, Projects, Experience, Skills, and Contact views.
