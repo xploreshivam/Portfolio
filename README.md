@@ -15,7 +15,6 @@ This project is a modern, modular web portfolio designed for full-stack develope
 - **Interactive Split-Panel Navigation**: Dual-pane interface enabling seamless desktop and mobile navigation across sections.
 - **Featured Projects Showcase**: Standard project cards featuring deep-dive technical overviews and live/repo links.
 - **Mini Projects Vault & Interactive Demos**: A filterable sandbox grid showcasing utility tools, ASCII art generators, and web applications.
-- **Architectural Case Studies**: Detailed modal dossiers displaying system designs, scalability audits, and performance metrics.
 - **Coding Profile Integrations**: Highlights metrics across LeetCode, GitHub, GeeksforGeeks, CodeChef, and Codeforces.
 - **Dark & Light Mode**: High-contrast, theme-aware CSS custom properties for comfortable viewing in any environment.
 
@@ -33,7 +32,7 @@ This project is a modern, modular web portfolio designed for full-stack develope
 ##  Usage Guide
 
 - **Navigating Sections**: Click any sidebar item or tab to switch between About, Projects, Experience, Skills, and Contact views.
-- **Opening Vault Demos**: Click on the **Mini Projects Vault** or **Case Studies** cards to open interactive modal previews.
+- **Opening Vault Demos**: Click on the **Mini Projects Vault** cards to open interactive modal previews.
 - **Theme Toggle**: Use the theme toggle button in the header bar to switch between Dark and Light modes.
 
 ---
