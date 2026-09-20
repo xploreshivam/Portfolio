@@ -925,8 +925,8 @@ if (mainForm) {
       tags: ['JavaScript', 'Css3', 'Vanilla', 'HTML5'],
       liveUrl: 'https://clickscorer.netlify.app/',
       codeUrl: 'https://github.com/xploreshivam/click-scorer'
-    },
-    {
+    }
+    /* {
       id: 'glass-generator',
       title: 'Glassmorphism CSS Builder',
       category: 'utility',
@@ -1009,7 +1009,7 @@ if (mainForm) {
       tags: ['LocalStorage', 'JSON', 'Search'],
       liveUrl: '#',
       codeUrl: 'https://github.com/xploreshivam'
-    }
+    } */
   ];
 
   const openCardBtn = document.getElementById('open-notebook-btn-card');
