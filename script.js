@@ -780,6 +780,225 @@ document.addEventListener('click', (e) => {
   });
 })();
 
+// PROJECT MEDIA CAROUSEL ENGINE (LEFT-IN RIGHT-OUT ANIMATION & SIDE NAVIGATION BUTTONS)
+(function initProjectCarousels() {
+  const DEFAULT_INTERVAL = 3200; // time in ms before auto-sliding to next image
+  const carouselTimers = new WeakMap();
+
+  function getCarouselElements(carousel) {
+    if (!carousel) return null;
+    const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
+    const dots = Array.from(carousel.querySelectorAll('.carousel-dot'));
+    if (!slides.length) return null;
+    const activeIndex = slides.findIndex(s => s.classList.contains('active'));
+    return {
+      slides,
+      dots,
+      currentIndex: activeIndex >= 0 ? activeIndex : 0
+    };
+  }
+
+  function transitionSlide(carousel, fromIndex, toIndex, direction = 'next') {
+    const data = getCarouselElements(carousel);
+    if (!data) return;
+    const { slides, dots } = data;
+    if (fromIndex === toIndex || !slides[fromIndex] || !slides[toIndex]) return;
+
+    const currentSlide = slides[fromIndex];
+    const targetSlide = slides[toIndex];
+
+    // Clear any previous running animation classes
+    slides.forEach(s => {
+      s.classList.remove('slide-in-from-left', 'slide-out-to-right', 'slide-in-from-right', 'slide-out-to-left');
+    });
+
+    if (direction === 'next') {
+      // User requirement: Incoming enters from left, outgoing exits to right
+      currentSlide.classList.add('slide-out-to-right');
+      targetSlide.classList.add('slide-in-from-left', 'active');
+    } else {
+      // Previous button navigation: User wants previous image, enters smoothly
+      currentSlide.classList.add('slide-out-to-right');
+      targetSlide.classList.add('slide-in-from-left', 'active');
+    }
+
+    // Update dots
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle('active', idx === toIndex);
+    });
+
+    // Cleanup after animation completes
+    setTimeout(() => {
+      currentSlide.classList.remove('active', 'slide-out-to-right', 'slide-out-to-left');
+      targetSlide.classList.remove('slide-in-from-left', 'slide-in-from-right');
+    }, 600);
+  }
+
+  function advanceCarousel(carousel, step = 1) {
+    const data = getCarouselElements(carousel);
+    if (!data || data.slides.length <= 1) return;
+    const { slides, currentIndex } = data;
+    const total = slides.length;
+    let nextIndex = (currentIndex + step) % total;
+    if (nextIndex < 0) nextIndex = total - 1;
+
+    transitionSlide(carousel, currentIndex, nextIndex, step > 0 ? 'next' : 'prev');
+  }
+
+  function startAutoplay(carousel) {
+    stopAutoplay(carousel);
+    if (!carousel || !carousel.isConnected) return;
+    const parentCard = carousel.closest('.project-card, article.card');
+    if (parentCard && !parentCard.classList.contains('card-expanded')) {
+      return; // only autoplay when card is expanded
+    }
+
+    const nbModal = carousel.closest('#notebook-modal');
+    if (nbModal && !nbModal.classList.contains('active')) {
+      return; // only autoplay when notebook modal is active
+    }
+
+    const intervalTime = parseInt(carousel.getAttribute('data-interval'), 10) || DEFAULT_INTERVAL;
+    const timerId = setInterval(() => {
+      if (!carousel.isConnected) {
+        stopAutoplay(carousel);
+        return;
+      }
+      const card = carousel.closest('.project-card, article.card');
+      if (card && !card.classList.contains('card-expanded')) {
+        stopAutoplay(carousel);
+        return;
+      }
+      const modal = carousel.closest('#notebook-modal');
+      if (modal && !modal.classList.contains('active')) {
+        stopAutoplay(carousel);
+        return;
+      }
+      if (carousel.dataset.isHovered === 'true') {
+        return; // pause while hovered so user can inspect image
+      }
+      advanceCarousel(carousel, 1);
+    }, intervalTime);
+
+    carouselTimers.set(carousel, timerId);
+  }
+
+  function stopAutoplay(carousel) {
+    if (carouselTimers.has(carousel)) {
+      clearInterval(carouselTimers.get(carousel));
+      carouselTimers.delete(carousel);
+    }
+  }
+
+  function restartAutoplay(carousel) {
+    stopAutoplay(carousel);
+    startAutoplay(carousel);
+  }
+
+  // Global event delegation for side buttons & pagination dots
+  document.addEventListener('click', (e) => {
+    // 1. Previous Button
+    const prevBtn = e.target.closest('.project-media-carousel .prev-btn');
+    if (prevBtn) {
+      e.preventDefault();
+      e.stopPropagation();
+      const carousel = prevBtn.closest('.project-media-carousel');
+      if (carousel) {
+        advanceCarousel(carousel, -1);
+        restartAutoplay(carousel);
+      }
+      return;
+    }
+
+    // 2. Next Button
+    const nextBtn = e.target.closest('.project-media-carousel .next-btn');
+    if (nextBtn) {
+      e.preventDefault();
+      e.stopPropagation();
+      const carousel = nextBtn.closest('.project-media-carousel');
+      if (carousel) {
+        advanceCarousel(carousel, 1);
+        restartAutoplay(carousel);
+      }
+      return;
+    }
+
+    // 3. Dot Pagination
+    const dotBtn = e.target.closest('.project-media-carousel .carousel-dot');
+    if (dotBtn) {
+      e.preventDefault();
+      e.stopPropagation();
+      const carousel = dotBtn.closest('.project-media-carousel');
+      if (carousel) {
+        const data = getCarouselElements(carousel);
+        if (data) {
+          const targetIndex = data.dots.indexOf(dotBtn);
+          if (targetIndex !== -1 && targetIndex !== data.currentIndex) {
+            transitionSlide(carousel, data.currentIndex, targetIndex, targetIndex > data.currentIndex ? 'next' : 'prev');
+            restartAutoplay(carousel);
+          }
+        }
+      }
+      return;
+    }
+  });
+
+  // Pause on hover, resume on mouse leave
+  document.addEventListener('mouseover', (e) => {
+    const carousel = e.target.closest('.project-media-carousel');
+    if (carousel && carousel.dataset.isHovered !== 'true') {
+      carousel.dataset.isHovered = 'true';
+    }
+  });
+
+  document.addEventListener('mouseout', (e) => {
+    const carousel = e.target.closest('.project-media-carousel');
+    if (carousel && !carousel.contains(e.relatedTarget)) {
+      carousel.dataset.isHovered = 'false';
+    }
+  });
+
+  // Watch for card expansion changes and modal open/close to trigger autoplay
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+        const target = mutation.target;
+        if (target.classList && (target.classList.contains('project-card') || target.classList.contains('card'))) {
+          const carousel = target.querySelector('.project-media-carousel');
+          if (carousel) {
+            if (target.classList.contains('card-expanded')) {
+              startAutoplay(carousel);
+            } else {
+              stopAutoplay(carousel);
+            }
+          }
+        }
+        if (target.id === 'notebook-modal') {
+          const carousels = target.querySelectorAll('.project-media-carousel');
+          if (target.classList.contains('active')) {
+            carousels.forEach(c => startAutoplay(c));
+          } else {
+            carousels.forEach(c => stopAutoplay(c));
+          }
+        }
+      }
+    });
+  });
+
+  observer.observe(document.body, {
+    attributes: true,
+    subtree: true,
+    attributeFilter: ['class']
+  });
+
+  // Also auto-start any already expanded cards upon page load
+  document.querySelectorAll('.card-expanded .project-media-carousel').forEach(c => startAutoplay(c));
+
+  window.startCarouselAutoplay = startAutoplay;
+  window.stopCarouselAutoplay = stopAutoplay;
+  window.advanceProjectCarousel = advanceCarousel;
+})();
+
 // CONTACT FORM SUBMISSION ENGINE (EMAILJS INTEGRATION)
 // EmailJS Setup Credentials
 // 1. Sign up / Log in at https://www.emailjs.com/
@@ -921,6 +1140,11 @@ if (mainForm) {
       categoryName: 'Utility',
       badgeClass: 'badge-utility',
       image: 'clickscorer.webp',
+      images: [
+        'clickscorer.webp',
+        'clickscorer-timer.svg',
+        'clickscorer-stats.svg'
+      ],
       desc: 'A fast-paced, CPS web app built with pure HTML5, CSS3, and Vanilla JavaScript with Web Audio feedback.',
       tags: ['JavaScript', 'Css3', 'Vanilla', 'HTML5'],
       liveUrl: 'https://clickscorer.netlify.app/',
@@ -1068,6 +1292,14 @@ if (mainForm) {
       notebookModal.removeAttribute('inert');
       document.body.style.overflow = 'hidden';
       if (closeNotebookBtn) closeNotebookBtn.focus();
+
+      setTimeout(() => {
+        notebookModal.querySelectorAll('.project-media-carousel[data-autoplay="true"]').forEach(c => {
+          if (typeof window.startCarouselAutoplay === 'function') {
+            window.startCarouselAutoplay(c);
+          }
+        });
+      }, 50);
     }
 
     document.querySelectorAll('.card-expanded').forEach(c => c.classList.remove('card-expanded'));
@@ -1075,6 +1307,11 @@ if (mainForm) {
 
   function closeNotebook() {
     if (notebookModal) {
+      notebookModal.querySelectorAll('.project-media-carousel').forEach(c => {
+        if (typeof window.stopCarouselAutoplay === 'function') {
+          window.stopCarouselAutoplay(c);
+        }
+      });
       notebookModal.classList.remove('active');
       notebookModal.setAttribute('aria-hidden', 'true');
       notebookModal.setAttribute('inert', '');
@@ -1151,11 +1388,36 @@ if (mainForm) {
     }
 
     galleryGrid.innerHTML = items.map(p => {
+      const images = p.images && p.images.length ? p.images : (p.image ? [p.image] : []);
+      const hasMultiple = images.length > 1;
       return `
       <div class="gallery-card" data-category="${p.category}">
-        <a href="${p.liveUrl || '#'}" target="_blank" rel="noopener noreferrer" class="gallery-card-media" style="display:block; text-decoration:none;">
-          <img src="${p.image}" alt="${p.title}" loading="lazy" />
-        </a>
+        <div class="gallery-card-media project-media-carousel" data-autoplay="${hasMultiple}" data-interval="3500">
+          <div class="carousel-track">
+            ${images.map((img, idx) => `
+              <div class="carousel-slide ${idx === 0 ? 'active' : ''}">
+                <img src="${img}" alt="${escapeHTML(p.title)} - Preview ${idx + 1}" loading="lazy" />
+              </div>
+            `).join('')}
+          </div>
+          ${hasMultiple ? `
+            <button type="button" class="carousel-nav-btn prev-btn" aria-label="Previous image" title="Previous image">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button type="button" class="carousel-nav-btn next-btn" aria-label="Next image" title="Next image">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+            <div class="carousel-dots">
+              ${images.map((_, idx) => `
+                <button type="button" class="carousel-dot ${idx === 0 ? 'active' : ''}" aria-label="Slide ${idx + 1}"></button>
+              `).join('')}
+            </div>
+          ` : ''}
+        </div>
         <div class="gallery-card-body">
           <div class="gallery-card-meta">
             <div style="display:flex; justify-content:flex-start; align-items:center; width:100%; margin-bottom:6px;">
@@ -1173,6 +1435,15 @@ if (mainForm) {
       </div>
     `;
     }).join('');
+
+    const nbModal = document.getElementById('notebook-modal');
+    if (nbModal && nbModal.classList.contains('active')) {
+      galleryGrid.querySelectorAll('.project-media-carousel[data-autoplay="true"]').forEach(c => {
+        if (typeof window.startCarouselAutoplay === 'function') {
+          window.startCarouselAutoplay(c);
+        }
+      });
+    }
   }
 
   renderGallery();

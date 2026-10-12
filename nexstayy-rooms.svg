@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%" style="background-color: #120c10; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <radialGradient id="nexRoomsGlow" cx="50%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#4a1525" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#120c10" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="roseAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fb7185"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#nexRoomsGlow)" />
+
+  <!-- Navbar -->
+  <rect x="0" y="0" width="1200" height="64" fill="#180e15" opacity="0.95" />
+  <line x1="0" y1="64" x2="1200" y2="64" stroke="#2d1723" stroke-width="1" />
+  
+  <g transform="translate(48, 20)">
+    <text x="0" y="17" fill="#ffffff" font-weight="800" font-size="22" letter-spacing="-0.5">NexStay<tspan fill="#fb7185">.</tspan></text>
+    <text x="105" y="17" fill="#fda4af" font-weight="500" font-size="13">/ Interactive Room Allocation Matrix</text>
+  </g>
+
+  <g transform="translate(1020, 18)">
+    <rect width="132" height="32" rx="16" fill="#be123c" />
+    <text x="66" y="21" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle">+ Assign Room</text>
+  </g>
+
+  <!-- Title & Filter Tabs -->
+  <text x="48" y="112" fill="#ffffff" font-size="28" font-weight="800">Wing B • Floor 2 Room Grid</text>
+  <text x="48" y="136" fill="#fda4af" font-size="14">32 Rooms Total • 28 Occupied (87.5%) • 4 Vacant</text>
+
+  <!-- Filter Pills -->
+  <g transform="translate(720, 100)">
+    <rect width="80" height="32" rx="16" fill="#381522" stroke="#be123c" stroke-width="1"/>
+    <text x="40" y="21" fill="#ffffff" font-size="12" font-weight="600" text-anchor="middle">All (32)</text>
+
+    <g transform="translate(90, 0)">
+      <rect width="90" height="32" rx="16" fill="#1e1017"/>
+      <text x="45" y="21" fill="#9ca3af" font-size="12" font-weight="500" text-anchor="middle">Vacant (4)</text>
+    </g>
+
+    <g transform="translate(190, 0)">
+      <rect width="105" height="32" rx="16" fill="#1e1017"/>
+      <text x="52" y="21" fill="#9ca3af" font-size="12" font-weight="500" text-anchor="middle">Premium (8)</text>
+    </g>
+
+    <g transform="translate(305, 0)">
+      <rect width="115" height="32" rx="16" fill="#1e1017"/>
+      <text x="57" y="21" fill="#9ca3af" font-size="12" font-weight="500" text-anchor="middle">Cleaning (2)</text>
+    </g>
+  </g>
+
+  <!-- Room Grid (4 columns x 3 rows = 12 visually rich room cards) -->
+  <g transform="translate(48, 160)">
+    <!-- Room B-201 (Occupied) -->
+    <rect width="260" height="135" rx="14" fill="#1a1117" stroke="#3d1d2b" stroke-width="1.5"/>
+    <text x="20" y="36" fill="#ffffff" font-size="18" font-weight="700">Room B-201</text>
+    <rect x="175" y="18" width="70" height="24" rx="12" fill="#3b101f"/>
+    <text x="210" y="34" fill="#fb7185" font-size="11" font-weight="700" text-anchor="middle">Occupied</text>
+    <text x="20" y="66" fill="#9ca3af" font-size="12">Resident: Rahul Sharma (CS-22)</text>
+    <text x="20" y="88" fill="#9ca3af" font-size="12">Type: 2-Sharing AC Suite</text>
+    <text x="20" y="112" fill="#34d399" font-size="11" font-weight="600">✓ Fee Paid: Till Dec 2026</text>
+
+    <!-- Room B-202 (Available / Vacant) -->
+    <g transform="translate(284, 0)">
+      <rect width="260" height="135" rx="14" fill="#152119" stroke="#10b981" stroke-width="1.5"/>
+      <text x="20" y="36" fill="#ffffff" font-size="18" font-weight="700">Room B-202</text>
+      <rect x="175" y="18" width="70" height="24" rx="12" fill="#064e3b"/>
+      <text x="210" y="34" fill="#34d399" font-size="11" font-weight="700" text-anchor="middle">Available</text>
+      <text x="20" y="66" fill="#6ee7b7" font-size="12">Ready for Immediate Check-in</text>
+      <text x="20" y="88" fill="#9ca3af" font-size="12">Type: 2-Sharing Deluxe</text>
+      <text x="20" y="112" fill="#fb7185" font-size="12" font-weight="700">+ Click to Allocate</text>
+    </g>
+
+    <!-- Room B-203 (Occupied) -->
+    <g transform="translate(568, 0)">
+      <rect width="260" height="135" rx="14" fill="#1a1117" stroke="#3d1d2b" stroke-width="1.5"/>
+      <text x="20" y="36" fill="#ffffff" font-size="18" font-weight="700">Room B-203</text>
+      <rect x="175" y="18" width="70" height="24" rx="12" fill="#3b101f"/>
+      <text x="210" y="34" fill="#fb7185" font-size="11" font-weight="700" text-anchor="middle">Occupied</text>
+      <text x="20" y="66" fill="#9ca3af" font-size="12">Resident: Aman Verma (ME-23)</text>
+      <text x="20" y="88" fill="#9ca3af" font-size="12">Type: Single Study Room</text>
+      <text x="20" y="112" fill="#34d399" font-size="11" font-weight="600">✓ Key Issued #049</text>
+    </g>
+
+    <!-- Room B-204 (Occupied) -->
+    <g transform="translate(852, 0)">
+      <rect width="252" height="135" rx="14" fill="#1a1117" stroke="#3d1d2b" stroke-width="1.5"/>
+      <text x="20" y="36" fill="#ffffff" font-size="18" font-weight="700">Room B-204</text>
+      <rect x="168" y="18" width="70" height="24" rx="12" fill="#3b101f"/>
+      <text x="203" y="34" fill="#fb7185" font-size="11" font-weight="700" text-anchor="middle">Occupied</text>
+      <text x="20" y="66" fill="#9ca3af" font-size="12">Resident: Dev Patel (IT-21)</text>
+      <text x="20" y="88" fill="#9ca3af" font-size="12">Type: 3-Sharing Standard</text>
+      <text x="20" y="112" fill="#facc15" font-size="11" font-weight="600">⚠ Maintenance Pending</text>
+    </g>
+
+    <!-- Row 2 -->
+    <!-- Room B-205 -->
+    <g transform="translate(0, 155)">
+      <rect width="260" height="135" rx="14" fill="#1a1117" stroke="#3d1d2b" stroke-width="1.5"/>
+      <text x="20" y="36" fill="#ffffff" font-size="18" font-weight="700">Room B-205</text>
+      <rect x="175" y="18" width="70" height="24" rx="12" fill="#3b101f"/>
+      <text x="210" y="34" fill="#fb7185" font-size="11" font-weight="700" text-anchor="middle">Occupied</text>
+      <text x="20" y="66" fill="#9ca3af" font-size="12">Resident: Sneha Roy (EC-24)</text>
+      <text x="20" y="88" fill="#9ca3af" font-size="12">Type: Single Study Room</text>
+      <text x="20" y="112" fill="#34d399" font-size="11" font-weight="600">✓ Biometric Access Synced</text>
+    </g>
+
+    <!-- Room B-206 (Available) -->
+    <g transform="translate(284, 155)">
+      <rect width="260" height="135" rx="14" fill="#152119" stroke="#10b981" stroke-width="1.5"/>
+      <text x="20" y="36" fill="#ffffff" font-size="18" font-weight="700">Room B-206</text>
+      <rect x="175" y="18" width="70" height="24" rx="12" fill="#064e3b"/>
+      <text x="210" y="34" fill="#34d399" font-size="11" font-weight="700" text-anchor="middle">Available</text>
+      <text x="20" y="66" fill="#6ee7b7" font-size="12">Deep cleaned &amp; sanitized</text>
+      <text x="20" y="88" fill="#9ca3af" font-size="12">Type: 2-Sharing AC Suite</text>
+      <text x="20" y="112" fill="#fb7185" font-size="12" font-weight="700">+ Click to Allocate</text>
+    </g>
+
+    <!-- Room B-207 (Occupied) -->
+    <g transform="translate(568, 155)">
+      <rect width="260" height="135" rx="14" fill="#1a1117" stroke="#3d1d2b" stroke-width="1.5"/>
+      <text x="20" y="36" fill="#ffffff" font-size="18" font-weight="700">Room B-207</text>
+      <rect x="175" y="18" width="70" height="24" rx="12" fill="#3b101f"/>
+      <text x="210" y="34" fill="#fb7185" font-size="11" font-weight="700" text-anchor="middle">Occupied</text>
+      <text x="20" y="66" fill="#9ca3af" font-size="12">Resident: Rohan Nair (CS-22)</text>
+      <text x="20" y="88" fill="#9ca3af" font-size="12">Type: 2-Sharing Deluxe</text>
+      <text x="20" y="112" fill="#34d399" font-size="11" font-weight="600">✓ Fee Paid: Verified</text>
+    </g>
+
+    <!-- Room B-208 (Occupied) -->
+    <g transform="translate(852, 155)">
+      <rect width="252" height="135" rx="14" fill="#1a1117" stroke="#3d1d2b" stroke-width="1.5"/>
+      <text x="20" y="36" fill="#ffffff" font-size="18" font-weight="700">Room B-208</text>
+      <rect x="168" y="18" width="70" height="24" rx="12" fill="#3b101f"/>
+      <text x="203" y="34" fill="#fb7185" font-size="11" font-weight="700" text-anchor="middle">Occupied</text>
+      <text x="20" y="66" fill="#9ca3af" font-size="12">Resident: Vicky Sen (CE-23)</text>
+      <text x="20" y="88" fill="#9ca3af" font-size="12">Type: Single Study Room</text>
+      <text x="20" y="112" fill="#34d399" font-size="11" font-weight="600">✓ Status: Active</text>
+    </g>
+  </g>
+
+  <!-- Bottom quick stats bar -->
+  <g transform="translate(48, 620)">
+    <text x="0" y="0" fill="#fda4af" font-size="13" font-weight="600">Floor 2 Facilities: High-Speed WiFi 6 (1 Gbps) • 24/7 Power Backup • Laundry Unit B Active</text>
+  </g>
+</svg>

@@ -26,7 +26,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></noscript>
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=carousel" />
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
@@ -200,9 +200,34 @@
         <h2 data-aos="fade-up">Projects</h2>
         <div class="projects-grid">
           <article class="card project-card standard-project-card">
-            <a class="card-media" href="https://machine-learninig-e1e9.onrender.com/" target="_blank" rel="noreferrer">
-              <img src="smart-agri.svg" alt="Smart Agriculture Analytic System" width="600" height="340" loading="lazy" decoding="async" />
-            </a>
+            <div class="card-media project-media-carousel" data-autoplay="true" data-interval="3500">
+              <div class="carousel-track">
+                <div class="carousel-slide active">
+                  <img src="smart-agri.svg" alt="Smart Agriculture Analytic System - Dashboard" width="600" height="340" loading="lazy" decoding="async" />
+                </div>
+                <div class="carousel-slide">
+                  <img src="smart-agri-soil.svg" alt="Smart Agriculture - Soil Quality &amp; Nutrient Intelligence" width="600" height="340" loading="lazy" decoding="async" />
+                </div>
+                <div class="carousel-slide">
+                  <img src="smart-agri-analytics.svg" alt="Smart Agriculture - Machine Learning Harvest Analytics" width="600" height="340" loading="lazy" decoding="async" />
+                </div>
+              </div>
+              <button type="button" class="carousel-nav-btn prev-btn" aria-label="Previous image" title="Previous image">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <button type="button" class="carousel-nav-btn next-btn" aria-label="Next image" title="Next image">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+              <div class="carousel-dots">
+                <button type="button" class="carousel-dot active" aria-label="Slide 1"></button>
+                <button type="button" class="carousel-dot" aria-label="Slide 2"></button>
+                <button type="button" class="carousel-dot" aria-label="Slide 3"></button>
+              </div>
+            </div>
             <div class="card-body">
               <h3 class="card-title">Smart Agriculture Analytic System</h3>
               <p class="card-text">Machine learning driven analytics platform providing real-time agricultural data, soil insights, and crop yield predictions.</p>
@@ -217,9 +242,34 @@
           </article>
 
           <article class="card project-card standard-project-card">
-            <a class="card-media" href="#" target="_blank" rel="noreferrer">
-              <img src="project-beta.png" alt="Project Beta Landing Page" width="600" height="340" loading="lazy" decoding="async" />
-            </a>
+            <div class="card-media project-media-carousel" data-autoplay="true" data-interval="3500">
+              <div class="carousel-track">
+                <div class="carousel-slide active">
+                  <img src="project-beta.png" alt="NexStayy Hostel Management System - Portal" width="600" height="340" loading="lazy" decoding="async" />
+                </div>
+                <div class="carousel-slide">
+                  <img src="nexstayy-rooms.svg" alt="NexStayy - Interactive Room Allocation Grid" width="600" height="340" loading="lazy" decoding="async" />
+                </div>
+                <div class="carousel-slide">
+                  <img src="nexstayy-admin.svg" alt="NexStayy - Resident Operations &amp; Gate Pass" width="600" height="340" loading="lazy" decoding="async" />
+                </div>
+              </div>
+              <button type="button" class="carousel-nav-btn prev-btn" aria-label="Previous image" title="Previous image">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <button type="button" class="carousel-nav-btn next-btn" aria-label="Next image" title="Next image">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+              <div class="carousel-dots">
+                <button type="button" class="carousel-dot active" aria-label="Slide 1"></button>
+                <button type="button" class="carousel-dot" aria-label="Slide 2"></button>
+                <button type="button" class="carousel-dot" aria-label="Slide 3"></button>
+              </div>
+            </div>
             <div class="card-body">
               <h3 class="card-title">Hostel Management System (NexStayy)</h3>
               <p class="card-text">Automated web application for room allocation, resident record tracking, role-based access control, and administrative reporting dashboards.</p>
@@ -234,9 +284,34 @@
           </article>
 
           <article class="card project-card standard-project-card">
-            <a class="card-media" href="#" target="_blank" rel="noreferrer">
-              <img src="heart.png" alt="Project Gamma Design System" width="600" height="340" loading="lazy" decoding="async" />
-            </a>
+            <div class="card-media project-media-carousel" data-autoplay="true" data-interval="3500">
+              <div class="carousel-track">
+                <div class="carousel-slide active">
+                  <img src="heart.png" alt="CardioPulse - Smart Heart Disease Risk Prediction" width="600" height="340" loading="lazy" decoding="async" />
+                </div>
+                <div class="carousel-slide">
+                  <img src="cardiopulse-biomarkers.svg" alt="CardioPulse - 16 Clinical Biomarker Engine" width="600" height="340" loading="lazy" decoding="async" />
+                </div>
+                <div class="carousel-slide">
+                  <img src="cardiopulse-report.svg" alt="CardioPulse - Diagnostic Health Report &amp; Insights" width="600" height="340" loading="lazy" decoding="async" />
+                </div>
+              </div>
+              <button type="button" class="carousel-nav-btn prev-btn" aria-label="Previous image" title="Previous image">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <button type="button" class="carousel-nav-btn next-btn" aria-label="Next image" title="Next image">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+              <div class="carousel-dots">
+                <button type="button" class="carousel-dot active" aria-label="Slide 1"></button>
+                <button type="button" class="carousel-dot" aria-label="Slide 2"></button>
+                <button type="button" class="carousel-dot" aria-label="Slide 3"></button>
+              </div>
+            </div>
             <div class="card-body">
               <h3 class="card-title">CardioPulse - Smart Heart Disease Risk Prediction System</h3>
               <p class="card-text">CardioPulse: Automated CVD risk stratification tool using 16 biomarkers, lifestyle factors, risk tiers, and personalized recommendations.</p>
@@ -747,6 +822,6 @@ features using Java, Spring Boot, and Hibernate, with MySQL for database connect
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
   <!-- EmailJS SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
-  <script src="script.js" defer></script>
+  <script src="script.js?v=carousel" defer></script>
 </body>
 </html>

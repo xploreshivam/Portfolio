@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%" style="background-color: #060e14; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <radialGradient id="agriAnalyticGlow" cx="40%" cy="40%" r="75%">
+      <stop offset="0%" stop-color="#0f2b38" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#050c12" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="chartLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <linearGradient id="areaFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#agriAnalyticGlow)" />
+
+  <!-- Navbar -->
+  <rect x="0" y="0" width="1200" height="64" fill="#07131b" opacity="0.95" />
+  <line x1="0" y1="64" x2="1200" y2="64" stroke="#132a38" stroke-width="1" />
+  
+  <g transform="translate(48, 20)">
+    <circle cx="12" cy="12" r="14" fill="#38bdf8" opacity="0.2"/>
+    <path d="M12 4C7.5 4 4 7.5 4 12c0 4.5 8 10 8 10s8-5.5 8-10c0-4.5-3.5-8-8-8z" fill="#38bdf8"/>
+    <text x="34" y="17" fill="#ffffff" font-weight="700" font-size="20">Agri-Smart</text>
+    <text x="145" y="17" fill="#7dd3fc" font-weight="500" font-size="13">/ Harvest Prediction &amp; Yield Trends</text>
+  </g>
+
+  <!-- Title -->
+  <text x="48" y="112" fill="#ffffff" font-size="28" font-weight="800">Historical Yield &amp; Machine Learning Forecasting</text>
+  <text x="48" y="136" fill="#93c5fd" font-size="14">Random Forest &amp; XGBoost Ensemble Engine • Prediction Confidence: 96.8%</text>
+
+  <!-- Big Interactive Chart Container -->
+  <g transform="translate(48, 160)">
+    <rect width="760" height="470" rx="16" fill="#091b24" stroke="#16384a" stroke-width="1.5"/>
+    <text x="32" y="44" fill="#ffffff" font-size="20" font-weight="700">Projected Crop Yield vs Seasonal Average</text>
+    <text x="32" y="68" fill="#9ca3af" font-size="13">Quintals per hectare over last 8 harvest cycles</text>
+
+    <!-- Grid lines -->
+    <line x1="60" y1="120" x2="700" y2="120" stroke="#16384a" stroke-dasharray="4"/>
+    <text x="50" y="124" fill="#64748b" font-size="11" text-anchor="end">50 Q</text>
+    <line x1="60" y1="180" x2="700" y2="180" stroke="#16384a" stroke-dasharray="4"/>
+    <text x="50" y="184" fill="#64748b" font-size="11" text-anchor="end">40 Q</text>
+    <line x1="60" y1="240" x2="700" y2="240" stroke="#16384a" stroke-dasharray="4"/>
+    <text x="50" y="244" fill="#64748b" font-size="11" text-anchor="end">30 Q</text>
+    <line x1="60" y1="300" x2="700" y2="300" stroke="#16384a" stroke-dasharray="4"/>
+    <text x="50" y="304" fill="#64748b" font-size="11" text-anchor="end">20 Q</text>
+    <line x1="60" y1="360" x2="700" y2="360" stroke="#1f4458" stroke-width="1.5"/>
+
+    <!-- Chart Path -->
+    <path d="M 80 320 Q 170 290 250 250 T 420 180 T 580 140 T 680 110 L 680 360 L 80 360 Z" fill="url(#areaFill)"/>
+    <path d="M 80 320 Q 170 290 250 250 T 420 180 T 580 140 T 680 110" fill="none" stroke="url(#chartLine)" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Glowing points -->
+    <circle cx="250" cy="250" r="5" fill="#38bdf8"/>
+    <circle cx="420" cy="180" r="5" fill="#34d399"/>
+    <circle cx="580" cy="140" r="5" fill="#10b981"/>
+    <circle cx="680" cy="110" r="7" fill="#10b981" stroke="#ffffff" stroke-width="2"/>
+
+    <!-- Data Callout -->
+    <rect x="570" y="55" width="125" height="42" rx="8" fill="#10b981"/>
+    <text x="632" y="74" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle">+22.4% GAIN</text>
+    <text x="632" y="89" fill="#022c22" font-size="11" font-weight="600" text-anchor="middle">48.2 Q / Hectare</text>
+
+    <!-- Months labels -->
+    <text x="80" y="385" fill="#94a3b8" font-size="12" text-anchor="middle">May</text>
+    <text x="170" y="385" fill="#94a3b8" font-size="12" text-anchor="middle">Jun</text>
+    <text x="250" y="385" fill="#94a3b8" font-size="12" text-anchor="middle">Jul</text>
+    <text x="340" y="385" fill="#94a3b8" font-size="12" text-anchor="middle">Aug</text>
+    <text x="420" y="385" fill="#94a3b8" font-size="12" text-anchor="middle">Sep</text>
+    <text x="500" y="385" fill="#94a3b8" font-size="12" text-anchor="middle">Oct</text>
+    <text x="580" y="385" fill="#94a3b8" font-size="12" text-anchor="middle">Nov</text>
+    <text x="680" y="385" fill="#38bdf8" font-size="12" font-weight="700" text-anchor="middle">Dec (Target)</text>
+  </g>
+
+  <!-- Weather & Climate Card -->
+  <g transform="translate(832, 160)">
+    <rect width="320" height="225" rx="16" fill="#091b24" stroke="#16384a" stroke-width="1.5"/>
+    <text x="24" y="38" fill="#ffffff" font-size="18" font-weight="700">Microclimate Forecast</text>
+    <text x="24" y="80" fill="#ffffff" font-size="36" font-weight="800">27°C</text>
+    <text x="135" y="76" fill="#38bdf8" font-size="14">Sunny / Humid 62%</text>
+
+    <line x1="24" y1="105" x2="296" y2="105" stroke="#16384a"/>
+    <text x="24" y="135" fill="#94a3b8" font-size="13">7-Day Rain Outlook:</text>
+    <text x="296" y="135" fill="#34d399" font-size="13" font-weight="700" text-anchor="end">14mm Expected</text>
+    <text x="24" y="165" fill="#94a3b8" font-size="13">Wind Speed:</text>
+    <text x="296" y="165" fill="#ffffff" font-size="13" font-weight="600" text-anchor="end">8 km/h NNW</text>
+    <text x="24" y="195" fill="#94a3b8" font-size="13">UV Index Rating:</text>
+    <text x="296" y="195" fill="#facc15" font-size="13" font-weight="700" text-anchor="end">5.2 (Moderate)</text>
+  </g>
+
+  <!-- Satellite Vegetation NDVI Index -->
+  <g transform="translate(832, 405)">
+    <rect width="320" height="225" rx="16" fill="#091b24" stroke="#16384a" stroke-width="1.5"/>
+    <text x="24" y="38" fill="#ffffff" font-size="18" font-weight="700">Sentinel-2 NDVI Index</text>
+    <text x="24" y="80" fill="#10b981" font-size="36" font-weight="800">0.82</text>
+    <text x="135" y="76" fill="#6ee7b7" font-size="13" font-weight="600">Very Dense Foliage</text>
+
+    <rect x="24" y="105" width="272" height="12" rx="6" fill="#162e24"/>
+    <rect x="24" y="105" width="223" height="12" rx="6" fill="#10b981"/>
+
+    <text x="24" y="150" fill="#94a3b8" font-size="13">Pest Infiltration Risk:</text>
+    <text x="296" y="150" fill="#10b981" font-size="13" font-weight="700" text-anchor="end">&lt; 2% (Negligible)</text>
+    <text x="24" y="180" fill="#94a3b8" font-size="13">Crop Stage:</text>
+    <text x="296" y="180" fill="#38bdf8" font-size="13" font-weight="700" text-anchor="end">Ripening / Mature</text>
+  </g>
+</svg>
