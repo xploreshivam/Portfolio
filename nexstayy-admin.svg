@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%" style="background-color: #110c12; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <radialGradient id="nexAdminGlow" cx="40%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#4c1d2e" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#110c12" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="roseBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fb7185"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#nexAdminGlow)" />
+
+  <!-- Navbar -->
+  <rect x="0" y="0" width="1200" height="64" fill="#180f17" opacity="0.95" />
+  <line x1="0" y1="64" x2="1200" y2="64" stroke="#2c1623" stroke-width="1" />
+  
+  <g transform="translate(48, 20)">
+    <text x="0" y="17" fill="#ffffff" font-weight="800" font-size="22">NexStay<tspan fill="#fb7185">.</tspan></text>
+    <text x="105" y="17" fill="#fda4af" font-weight="500" font-size="13">/ Administrator Command Center</text>
+  </g>
+
+  <!-- Title -->
+  <text x="48" y="112" fill="#ffffff" font-size="28" font-weight="800">Hostel Operations &amp; Resident Administration</text>
+  <text x="48" y="136" fill="#fda4af" font-size="14">Automated rent reconciliation • Biometric gate sync • Maintenance tickets</text>
+
+  <!-- 4 Metrics Row -->
+  <g transform="translate(48, 160)">
+    <rect width="260" height="105" rx="14" fill="#1c1219" stroke="#3b1b2a" stroke-width="1.5"/>
+    <text x="24" y="36" fill="#9ca3af" font-size="13">Total Registered Students</text>
+    <text x="24" y="74" fill="#ffffff" font-size="32" font-weight="800">254</text>
+    <text x="140" y="72" fill="#34d399" font-size="13" font-weight="600">↑ +14 new</text>
+
+    <g transform="translate(284, 0)">
+      <rect width="260" height="105" rx="14" fill="#1c1219" stroke="#3b1b2a" stroke-width="1.5"/>
+      <text x="24" y="36" fill="#9ca3af" font-size="13">Hostel Occupancy Rate</text>
+      <text x="24" y="74" fill="#ffffff" font-size="32" font-weight="800">94.2%</text>
+      <text x="150" y="72" fill="#fb7185" font-size="13" font-weight="600">120 / 128 Beds</text>
+    </g>
+
+    <g transform="translate(568, 0)">
+      <rect width="260" height="105" rx="14" fill="#1c1219" stroke="#3b1b2a" stroke-width="1.5"/>
+      <text x="24" y="36" fill="#9ca3af" font-size="13">Monthly Fee Collection</text>
+      <text x="24" y="74" fill="#ffffff" font-size="32" font-weight="800">₹14.8 L</text>
+      <text x="160" y="72" fill="#34d399" font-size="13" font-weight="600">98% Collected</text>
+    </g>
+
+    <g transform="translate(852, 0)">
+      <rect width="252" height="105" rx="14" fill="#1c1219" stroke="#3b1b2a" stroke-width="1.5"/>
+      <text x="24" y="36" fill="#9ca3af" font-size="13">Open Tickets</text>
+      <text x="24" y="74" fill="#ffffff" font-size="32" font-weight="800">3</text>
+      <text x="110" y="72" fill="#facc15" font-size="13" font-weight="600">All in progress</text>
+    </g>
+  </g>
+
+  <!-- Main Activity Table & Live Gate Log -->
+  <g transform="translate(48, 290)">
+    <!-- Student Roster / Allocation Table -->
+    <rect width="700" height="340" rx="16" fill="#1c1219" stroke="#3b1b2a" stroke-width="1.5"/>
+    <text x="28" y="40" fill="#ffffff" font-size="18" font-weight="700">Recent Check-In &amp; Allocations</text>
+
+    <!-- Table Header -->
+    <rect x="28" y="65" width="644" height="32" rx="6" fill="#291623"/>
+    <text x="45" y="86" fill="#fda4af" font-size="12" font-weight="600">STUDENT</text>
+    <text x="230" y="86" fill="#fda4af" font-size="12" font-weight="600">ROOM</text>
+    <text x="360" y="86" fill="#fda4af" font-size="12" font-weight="600">COURSE</text>
+    <text x="500" y="86" fill="#fda4af" font-size="12" font-weight="600">STATUS</text>
+
+    <!-- Row 1 -->
+    <text x="45" y="125" fill="#ffffff" font-size="13" font-weight="600">Aarav Singhania</text>
+    <text x="230" y="125" fill="#e5e7eb" font-size="13">A-104 (AC Single)</text>
+    <text x="360" y="125" fill="#9ca3af" font-size="13">B.Tech CSE - 3rd Yr</text>
+    <rect x="495" y="110" width="80" height="22" rx="11" fill="#064e3b"/>
+    <text x="535" y="125" fill="#34d399" font-size="11" font-weight="700" text-anchor="middle">Checked-in</text>
+
+    <!-- Row 2 -->
+    <line x1="28" y1="145" x2="672" y2="145" stroke="#2d1726"/>
+    <text x="45" y="175" fill="#ffffff" font-size="13" font-weight="600">Pooja Mehra</text>
+    <text x="230" y="175" fill="#e5e7eb" font-size="13">C-302 (2-Sharing)</text>
+    <text x="360" y="175" fill="#9ca3af" font-size="13">BBA - 2nd Yr</text>
+    <rect x="495" y="160" width="80" height="22" rx="11" fill="#064e3b"/>
+    <text x="535" y="175" fill="#34d399" font-size="11" font-weight="700" text-anchor="middle">Checked-in</text>
+
+    <!-- Row 3 -->
+    <line x1="28" y1="195" x2="672" y2="195" stroke="#2d1726"/>
+    <text x="45" y="225" fill="#ffffff" font-size="13" font-weight="600">Kavya Iyer</text>
+    <text x="230" y="225" fill="#e5e7eb" font-size="13">B-205 (AC Suite)</text>
+    <text x="360" y="225" fill="#9ca3af" font-size="13">MCA - 1st Yr</text>
+    <rect x="495" y="210" width="80" height="22" rx="11" fill="#3b101f"/>
+    <text x="535" y="225" fill="#fb7185" font-size="11" font-weight="700" text-anchor="middle">On Leave</text>
+
+    <!-- Row 4 -->
+    <line x1="28" y1="245" x2="672" y2="245" stroke="#2d1726"/>
+    <text x="45" y="275" fill="#ffffff" font-size="13" font-weight="600">Aditya Roy</text>
+    <text x="230" y="275" fill="#e5e7eb" font-size="13">A-210 (2-Sharing)</text>
+    <text x="360" y="275" fill="#9ca3af" font-size="13">B.Tech ECE - 4th Yr</text>
+    <rect x="495" y="260" width="80" height="22" rx="11" fill="#064e3b"/>
+    <text x="535" y="275" fill="#34d399" font-size="11" font-weight="700" text-anchor="middle">Checked-in</text>
+  </g>
+
+  <!-- Night Gate Pass & Live Biometric Log -->
+  <g transform="translate(772, 290)">
+    <rect width="380" height="340" rx="16" fill="#1c1219" stroke="#3b1b2a" stroke-width="1.5"/>
+    <text x="28" y="40" fill="#ffffff" font-size="18" font-weight="700">Digital Gate Pass System</text>
+    <text x="28" y="62" fill="#9ca3af" font-size="12">Biometric turnout log with warden approval</text>
+
+    <rect x="28" y="85" width="324" height="65" rx="10" fill="#291623"/>
+    <text x="42" y="110" fill="#ffffff" font-weight="600" font-size="13">Outpass #8491 - Approved</text>
+    <text x="42" y="132" fill="#fda4af" font-size="11">Rohan Nair • Library Late Pass till 10:30 PM</text>
+
+    <rect x="28" y="165" width="324" height="65" rx="10" fill="#291623"/>
+    <text x="42" y="190" fill="#ffffff" font-weight="600" font-size="13">Outpass #8492 - Approved</text>
+    <text x="42" y="212" fill="#fda4af" font-size="11">Sneha Roy • Weekend Home Visit</text>
+
+    <rect x="28" y="245" width="324" height="65" rx="10" fill="#381020" stroke="#be123c" stroke-width="1"/>
+    <text x="42" y="270" fill="#ffffff" font-weight="700" font-size="13">Automated Attendance Sync</text>
+    <text x="42" y="292" fill="#34d399" font-size="11">✓ 249 of 254 accounted for at 09:00 PM</text>
+  </g>
+</svg>

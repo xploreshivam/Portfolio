@@ -26,17 +26,15 @@ app.use(express.static(__dirname, {
   maxAge: '1d',
   etag: true,
   setHeaders: (res, filepath) => {
-    if (filepath.endsWith('.html')) {
+    if (filepath.endsWith('.html') || filepath.endsWith('.js') || filepath.endsWith('.css')) {
       res.setHeader('Cache-Control', 'no-cache');
     } else if (
       filepath.endsWith('.webp') ||
       filepath.endsWith('.png') ||
       filepath.endsWith('.svg') ||
-      filepath.endsWith('.pdf') ||
-      filepath.endsWith('.css') ||
-      filepath.endsWith('.js')
+      filepath.endsWith('.pdf')
     ) {
-      res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+      res.setHeader('Cache-Control', 'public, max-age=3600');
     }
   }
 }));
